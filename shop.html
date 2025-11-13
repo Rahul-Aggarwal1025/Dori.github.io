@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shop — Dori</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <meta name="description" content="Browse handmade products from Dori artisans">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">
+        <div class="logo">DOR</div>
+        <div>
+          <h1>Dori</h1>
+          <p>Handmade • Dignity • Community</p>
+        </div>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/stories.html">Stories</a>
+        <a href="/partners.html">Partners</a>
+        <a class="cta" href="/register.html">Register</a>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <section class="card">
+          <h3>Shop — Featured items</h3>
+          <p class="muted">Handmade goods from our community. Click an item for details.</p>
+          <div id="products-root" style="margin-top:12px"></div>
+        </section>
+      </div>
+
+      <aside>
+        <section class="card">
+          <h4>Need help?</h4>
+          <div class="muted">Contact us at <a href="mailto:hello@dori.org">hello@dori.org</a> for bulk orders, partnerships, or artisan registration.</div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <strong>Dori</strong></div>
+      <div class="muted"><a href="/">Back to home</a></div>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="inner" onclick="event.stopPropagation()">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div id="modal-caption" style="font-weight:700"></div>
+        <button onclick="closeModal()" style="background:transparent;border:0;font-weight:700;cursor:pointer;color:#777">Close ✕</button>
+      </div>
+      <img id="modal-img" src="" alt="">
+    </div>
+  </div>
+
+  <script src="/assets/scripts.js" defer></script>
+</body>
+</html>

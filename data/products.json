@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Handmade Crochet Bag",
+    "short": "Soft cotton crochet bag",
+    "description": "A lovingly handmade crochet bag made with sustainable cotton. Dimensions: 30x25cm. Care: hand wash.",
+    "price": 1200,
+    "artisan": "Rita, Rajasthan",
+    "image": "https://images.unsplash.com/photo-1520975912091-3f9e9e3d9f66?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "Embroidered Cushion",
+    "short": "Hand-stitched floral cushion",
+    "description": "Hand-embroidered cushion cover with natural dyes. Size: 40x40cm. Insert not included.",
+    "price": 750,
+    "artisan": "Sunita, Karnataka",
+    "image": "https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "Knitted Scarf",
+    "short": "Warm merino wool scarf",
+    "description": "Hand-knitted merino scarf, cozy and durable. Length: 180cm.",
+    "price": 900,
+    "artisan": "Leela, West Bengal",
+    "image": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "Table Runner",
+    "short": "Handwoven table runner",
+    "description": "Elegant handwoven table runner crafted with traditional techniques.",
+    "price": 1500,
+    "artisan": "Nirmala, Tamil Nadu",
+    "image": "https://images.unsplash.com/photo-1505691723518-36a6800f0c14?q=80&w=1200&auto=format&fit=crop"
+  }
+]

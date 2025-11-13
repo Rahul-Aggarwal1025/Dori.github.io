@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Dori</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">
+        <div class="logo">DOR</div>
+        <div>
+          <h1>Dori</h1>
+          <p>Handmade • Dignity • Community</p>
+        </div>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/shop.html">Shop</a>
+        <a class="cta" href="/register.html">Register</a>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <section class="card">
+          <h3>Contact</h3>
+          <p class="muted">For general inquiries, partnerships, or press, reach out to:</p>
+          <div style="margin-top:12px">
+            <div class="muted"><strong>Email:</strong> <a href="mailto:hello@dori.org">hello@dori.org</a></div>
+            <div class="muted" style="margin-top:8px"><strong>Phone (India):</strong> +91 98765 43210</div>
+          </div>
+
+          <div style="margin-top:14px">
+            <form onsubmit="event.preventDefault(); window.location.href='mailto:hello@dori.org?subject='+encodeURIComponent(document.getElementById('c-subj').value)+'&body='+encodeURIComponent(document.getElementById('c-body').value)"> 
+              <input id="c-subj" class="input" placeholder="Subject" required>
+              <textarea id="c-body" class="input" placeholder="Message" rows="6" style="margin-top:8px" required></textarea>
+              <div style="margin-top:8px"><button class="btn" type="submit">Send</button></div>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <section class="card">
+          <h4>Press & partners</h4>
+          <div class="muted">Use the contact form to start a conversation — we'll reply within 3 business days.</div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <strong>Dori</strong></div>
+    </footer>
+  </div>
+  <script src="/assets/scripts.js" defer></script>
+</body>
+</html>

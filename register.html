@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Register an artisan — Dori</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">
+        <div class="logo">DOR</div>
+        <div>
+          <h1>Dori</h1>
+          <p>Handmade • Dignity • Community</p>
+        </div>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/shop.html">Shop</a>
+        <a class="cta" href="/register.html">Register</a>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <section class="card">
+          <h3>Register an artisan</h3>
+          <p class="muted">We make registration simple. A family member, volunteer, or NGO can help register artisans (60+).</p>
+
+          <form id="register-form" class="grid" style="margin-top:12px">
+            <div class="form-row">
+              <input class="input" name="artisan_name" placeholder="Artisan name" required>
+              <input class="input" name="age" placeholder="Age" type="number" required>
+            </div>
+            <div class="form-row">
+              <input class="input" name="location" placeholder="City, State" required>
+              <input class="input" name="phone" placeholder="Phone / caretaker contact">
+            </div>
+            <input class="input" name="product_name" placeholder="Product name" required>
+            <textarea class="input" name="product_desc" placeholder="Short description (materials, size, care)" rows="4"></textarea>
+
+            <div style="display:flex;gap:10px;margin-top:8px">
+              <button class="btn" type="button" onclick="submitRegister()">Submit</button>
+              <a class="btn ghost" href="mailto:hello@dori.org?subject=Register%20artisan">Contact us to register</a>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <aside>
+        <section class="card">
+          <h4>Need help?</h4>
+          <div class="muted">If you have trouble with the form, email <a href="mailto:hello@dori.org">hello@dori.org</a> with artisan details.</div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <strong>Dori</strong></div>
+    </footer>
+  </div>
+
+  <script>
+    function submitRegister(){
+      var form = document.getElementById('register-form');
+      // For now we present data and instruct to email — no backend
+      var data = Array.from(new FormData(form).entries()).reduce(function(obj,[k,v]){obj[k]=v;return obj;},{})
+      var body = Object.keys(data).map(function(k){return k+': '+data[k]}).join('\n');
+      var mailto = 'mailto:hello@dori.org?subject=Register%20artisan&body='+encodeURIComponent(body);
+      window.location.href = mailto;
+    }
+  </script>
+
+</body>
+</html>
