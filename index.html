@@ -3,57 +3,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dori • Empowering Elder Artisans</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
-  <meta name="description" content="Dori — a social-commerce platform empowering elderly artisans across India. Handmade goods, fair pay, community-driven.">
-
-  <link rel="stylesheet" href="/assets/styles.css">
+  <title>Dori — Handmade • Dignity • Community</title>
+  <meta name="description" content="Dori — a social-commerce platform empowering elderly artisans across India. Handmade goods, fair pay, community-driven." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fbf8f5;--paper:#fbf6f2;--card:#ffffff;--muted:#6a625a;
+      --accent:#b85b34;--accent-2:#f3e6dd;--radius:14px;--max-w:1100px;
+    }*{box-sizing:border-box}html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,var(--paper),#faf8f6);
+      color:#2b2b2b;line-height:1.5;padding:28px;display:flex;justify-content:center;-webkit-font-smoothing:antialiased;}
+    .wrap{width:100%;max-width:var(--max-w)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:22px}
+    .brand{display:flex;gap:14px;align-items:center;color:inherit;text-decoration:none}
+    .logo{width:72px;height:72px;border-radius:12px;padding:10px;background:linear-gradient(135deg,#f7d6c6,#b85b34);display:flex;align-items:center;justify-content:center;box-shadow: 0 8px 30px rgba(184,91,52,0.12);}
+    .brand h1{margin:0;font-family:Merriweather, serif;font-size:20px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a.cta{background:var(--accent);color:white;padding:8px 12px;border-radius:10px}
+    nav a.ghost{border:1px solid rgba(43,43,43,0.06);padding:8px 10px;border-radius:10px;background:transparent;color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1fr 390px;gap:20px;align-items:center;background:var(--card);padding:28px;border-radius:18px;box-shadow:0 12px 40px rgba(20,30,28,0.06);margin-bottom:20px}
+    .hero h2{font-family:Merriweather,serif;margin:0;font-size:30px;color:#2b2b2b}
+    .lead{color:var(--muted);margin-top:8px}
+    .hero .actions{margin-top:18px;display:flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(43,43,43,0.06);color:var(--accent);font-weight:700}
+    .hero-visual{border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#fff7f2,#fff);border:1px solid rgba(43,43,43,0.03);padding:12px;display:flex;flex-direction:column;gap:12px;align-items:stretch;}
+    .hero-visual img{width:100%;height:220px;object-fit:cover;border-radius:10px;display:block}
+    main{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(16,36,34,0.04);border:1px solid rgba(16,36,34,0.02)}
+    section h3{margin:0 0 12px 0;font-family:Merriweather,serif}
+    .muted{color:var(--muted);font-size:14px}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .feature{background:var(--accent-2);padding:12px;border-radius:10px}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.03)}
+    .story{display:flex;gap:12px}.story img{width:84px;height:84px;object-fit:cover;border-radius:8px}
+    .register-steps{display:flex;flex-direction:column;gap:10px}
+    .step{display:flex;gap:12px;align-items:flex-start}
+    .step .num{width:36px;height:36px;border-radius:8px;background:#fff;border:1px solid rgba(43,43,43,0.04);display:flex;align-items:center;justify-content:center;font-weight:700}
+    footer{margin-top:20px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+    .modal{position:fixed;inset:0;background:rgba(7,8,7,0.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:40}
+    .modal .inner{max-width:920px;width:100%;background:white;border-radius:10px;padding:14px}
+    .modal img{width:100%;height:auto;border-radius:8px}
+    .modal .caption{font-weight:700;margin-bottom:8px}
+    .form-row{display:flex;gap:8px}
+    input[type="text"], input[type="email"], input[type="tel"], textarea, select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(43,43,43,0.06);font-size:14px;}
+    label{font-size:13px;color:var(--muted);display:block;margin-bottom:6px}
+    .success{background:linear-gradient(90deg,#e9f7f1,#f0fbf8);border:1px solid rgba(107,139,123,0.08);padding:12px;border-radius:10px;color:#0a503e;font-weight:600;}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}main{grid-template-columns:1fr}.hero-visual img{height:180px}}
+  </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <a class="brand" href="#">
-        <div class="logo">DOR</div>
-        <div>
-          <h1>Dori</h1>
-          <p>Handmade • Dignity • Community</p>
+        <div class="logo" aria-hidden="true">
+          <!-- improved woven-thread SVG logo -->
+          <svg width="52" height="52" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dori logo">
+            <defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#fff1eb"/><stop offset="1" stop-color="#ffd7c2"/></linearGradient></defs>
+            <rect rx="10" width="64" height="64" fill="url(#lg)"/>
+            <g transform="translate(8,10)" stroke="#833f24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <path d="M4 6c4-4 14-6 22 0 6 5 6 18-2 22-8 5-20 2-24-4" opacity="0.95"/>
+              <path d="M2 18c6 3 16 4 24-2" opacity="0.9"/>
+              <path d="M6 2c6 2 12 2 18 8" opacity="0.85"/>
+            </g>
+          </svg>
         </div>
+        <div><h1>Dori</h1><p>Handmade • Dignity • Community</p></div>
       </a>
+
       <nav>
         <a href="#about">About</a>
-        <a href="#how">How it works</a>
+        <a href="#how">How</a>
         <a href="#shop">Shop</a>
-        <a class="cta" href="#register">Register</a>
+        <a class="cta" id="btn-register" href="#register">Register</a>
       </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero card" aria-label="Hero">
       <div>
-        <h2>Empowering elderly artisans across India</h2>
-        <p class="lead">Dori is a social-impact platform that connects elderly creators with customers who value authentic, handcrafted products. We help seniors earn sustainable income while preserving traditional crafts and dignity.</p>
+        <h2>Handmade goods by elderly artisans — dignity through craft.</h2>
+        <p class="lead">Dori connects senior artisans with customers who value authentic, handcrafted products. We handle logistics, pricing transparency, and storytelling so artisans can focus on creating.</p>
 
-        <div class="hero-meta muted" style="margin-top:12px">
-          <strong>Mission:</strong> To create livelihood opportunities for India’s elderly by giving them a dignified platform to showcase and sell handmade goods.
+        <div style="margin-top:12px;color:var(--muted)"><strong>Mission:</strong> Provide steady income and a respectful platform for senior makers across communities.</div>
+
+        <div class="hero-actions actions">
+          <button class="btn" id="hero-register">Register an artisan</button>
+          <button class="btn ghost" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Browse products</button>
+          <a class="btn ghost" href="mailto:hello@dori.org?subject=Partnership%20with%20Dori" style="text-decoration:none;padding:10px 12px">Partner</a>
         </div>
 
-        <div class="actions">
-          <button class="btn" onclick="document.querySelector('#how').scrollIntoView({behavior:'smooth'})">How it works</button>
-          <button class="btn ghost" onclick="document.querySelector('#shop').scrollIntoView({behavior:'smooth'})">Browse products</button>
-        </div>
-
-        <div style="margin-top:14px;color:var(--muted);font-size:13px">
-          Trusted partnerships with NGOs, old-age homes, and volunteers to onboard creators and provide tech support.
-        </div>
+        <div style="margin-top:14px;color:var(--muted);font-size:13px">We partner with NGOs, volunteers, and old-age homes to onboard artisans and provide digital support.</div>
       </div>
 
-      <aside class="hero-visual">
-        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format&fit=crop" alt="elder artisan hands weaving">
-        <div style="width:100%;display:flex;justify-content:space-between;align-items:center">
-          <div style="font-weight:700">Handmade • Fair pay</div>
-          <div class="muted">Sustainable • Ethical</div>
+      <aside class="hero-visual" aria-hidden="true">
+        <!-- Hero: artisan hands at work (A) -->
+        <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1600&auto=format&fit=crop" alt="artisan hands weaving" onerror="this.style.display='none'"/>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-weight:700;color:#4a2a1d">Handmade • Fair pay</div>
+          <div style="color:var(--muted)">Ethical • Community-first</div>
         </div>
       </aside>
     </section>
@@ -62,52 +112,41 @@
       <div>
         <section id="about" class="card">
           <h3>About Dori</h3>
-          <p class="muted">Dori empowers elderly artisans (60+) by providing an online marketplace, technical support, and logistics so they can focus on what they do best — creating. Artisans receive fair payments directly after each sale, and Dori partners with NGOs and old-age homes to onboard and support seniors.</p>
+          <p class="muted">Dori is a social-commerce platform that empowers elderly artisans (60+) by providing a marketplace, technical assistance for listing, and logistics support. We ensure transparent payments and tell the artisan's story alongside each product.</p>
 
           <div style="margin-top:14px" class="features">
-            <div class="feature">
-              <strong>Marketplace</strong>
-              <div class="muted">List and sell handmade crochet, embroidery, knitting, and craft products.</div>
-            </div>
-            <div class="feature">
-              <strong>Support</strong>
-              <div class="muted">Assistance with registration, uploading listings, pricing, and communication.</div>
-            </div>
-            <div class="feature">
-              <strong>Logistics</strong>
-              <div class="muted">Packaging, shipping, and quality checks handled by Dori.</div>
-            </div>
-            <div class="feature">
-              <strong>Community</strong>
-              <div class="muted">Partnerships with NGOs, volunteers, and old-age homes to increase reach.</div>
-            </div>
+            <div class="feature"><strong>Marketplace</strong><div class="muted">Curated listings — crochet, embroidery, knitting, woven goods and more.</div></div>
+            <div class="feature"><strong>Onboarding support</strong><div class="muted">Volunteers and NGO partners help register artisans and upload listings.</div></div>
+            <div class="feature"><strong>Logistics</strong><div class="muted">Packing, quality checks, and shipping handled by Dori.</div></div>
+            <div class="feature"><strong>Community</strong><div class="muted">We amplify artisan stories and create local training opportunities.</div></div>
           </div>
         </section>
 
         <section id="how" class="card" style="margin-top:18px">
-          <h3>How Dori functions</h3>
+          <h3>How Dori works</h3>
           <div style="margin-top:10px" class="grid">
-            <div class="muted"><strong>1. Registration</strong> — Elder artisans (60+) register on the platform with help from family, volunteers or NGOs.</div>
-            <div class="muted"><strong>2. Product creation</strong> — Artisans make crochet bags, embroidery, home décor, baby wear and more.</div>
-            <div class="muted"><strong>3. Listing & marketing</strong> — Dori uploads product images and artisan stories, shares on social media.</div>
-            <div class="muted"><strong>4. Ordering & logistics</strong> — Dori handles packaging, shipping, and customer service.</div>
-            <div class="muted"><strong>5. Payment</strong> — Artisans receive transparent, direct payments after each sale.</div>
-            <div class="muted"><strong>6. Community building</strong> — Partnerships expand reach and add training opportunities.</div>
+            <div class="muted"><strong>1. Register</strong> — A caregiver, volunteer or NGO registers the artisan (we offer assisted registration).</div>
+            <div class="muted"><strong>2. Create listing</strong> — Upload photos, pricing and a short artisan story.</div>
+            <div class="muted"><strong>3. Sell & ship</strong> — Orders are processed; Dori handles packaging and shipping.</div>
+            <div class="muted"><strong>4. Payment</strong> — Transparent payments are released to artisans after sale.</div>
+            <div class="muted"><strong>5. Scale</strong> — Partnerships expand reach and training opportunities.</div>
           </div>
         </section>
 
         <section id="shop" class="card" style="margin-top:18px">
           <h3>Featured products</h3>
-          <p class="muted">A small selection of handmade goods lovingly made by senior artisans.</p>
+          <p class="muted">Curated selection of handcrafted goods — click any image to view details.</p>
 
           <div class="gallery" style="margin-top:12px">
-            <img src="https://images.unsplash.com/photo-1520975912091-3f9e9e3d9f66?q=80&w=1200&auto=format&fit=crop" alt="handmade bag" onclick="openModal(this.src, 'Handmade Crochet Bag — ₹1,200')">
-            <img src="https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=1200&auto=format&fit=crop" alt="embroidery" onclick="openModal(this.src, 'Embroidered Cushion — ₹750')">
-            <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=1200&auto=format&fit=crop" alt="knitted scarf" onclick="openModal(this.src, 'Knitted Scarf — ₹900')">
-            <img src="https://images.unsplash.com/photo-1505691723518-36a6800f0c14?q=80&w=1200&auto=format&fit=crop" alt="home decor" onclick="openModal(this.src, 'Handmade Table Runner — ₹1,500')">
+            <!-- B: product shots (clean, Etsy-style) -->
+            <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=1200&auto=format&fit=crop" alt="handmade crochet bag" onclick="openImgModal(this.src,'Handmade Crochet Bag — ₹1,200')" />
+            <img src="https://images.unsplash.com/photo-1519741491417-6d4b09b4533d?q=80&w=1200&auto=format&fit=crop" alt="embroidered cushion" onclick="openImgModal(this.src,'Embroidered Cushion — ₹750')" />
+            <!-- C: rural / craft environment shots -->
+            <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1200&auto=format&fit=crop" alt="handloom loom in rural setting" onclick="openImgModal(this.src,'Handloom Runner — ₹1,500')" />
+            <img src="https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?q=80&w=1200&auto=format&fit=crop" alt="artisans at market" onclick="openImgModal(this.src,'Market Crafts — curated sets')" />
           </div>
 
-          <div style="margin-top:12px" class="muted">Tip: Each item includes the artisan story, materials, and care instructions on the product page.</div>
+          <div style="margin-top:12px" class="muted">Tip: Replace these with your artisans' photos for authenticity. If you want, I will create an `assets/` zip with these exact images so everything stays local and reliable.</div>
         </section>
 
       </div>
@@ -115,37 +154,40 @@
       <aside>
         <section class="card">
           <h4>Register an artisan</h4>
-          <div class="register-steps" id="register">
-            <div class="step"><div class="num">1</div><div><strong>Sign up</strong><div class="muted">Family member, volunteer, or NGO can register the artisan on Dori.</div></div></div>
-            <div class="step"><div class="num">2</div><div><strong>Create listing</strong><div class="muted">Upload product images, description, price and artisan story.</div></div></div>
-            <div class="step"><div class="num">3</div><div><strong>Ship & earn</strong><div class="muted">Dori handles logistics, payments go directly to artisans.</div></div></div>
+          <p class="muted">We make registration easy — you can register here or email us. Volunteers will assist with listing and photography where needed.</p>
+
+          <div style="margin-top:12px">
+            <button class="btn" id="open-register">Register an artisan</button>
+            <a href="mailto:hello@dori.org?subject=Register%20an%20Artisan" class="btn ghost" style="display:inline-block;margin-left:8px;text-decoration:none">Email us</a>
           </div>
 
           <div style="margin-top:12px">
-            <a class="btn" href="mailto:hello@dori.org">Contact us to register</a>
+            <h4 style="margin-bottom:8px">Quick steps</h4>
+            <div class="register-steps">
+              <div class="step"><div class="num">1</div><div><strong>Sign up</strong><div class="muted">Enter basic artisan details and contact.</div></div></div>
+              <div class="step"><div class="num">2</div><div><strong>Upload</strong><div class="muted">Add product photos & story (we can help).</div></div></div>
+              <div class="step"><div class="num">3</div><div><strong>Sell</strong><div class="muted">Orders are processed; payments go to artisans.</div></div></div>
+            </div>
           </div>
         </section>
 
         <section class="card" style="margin-top:14px">
-          <h4>Partners & stakeholders</h4>
+          <h4>Partners</h4>
           <div class="muted" style="margin-top:8px">
             <ul style="padding-left:18px;margin:0">
-              <li>Old-age homes & NGOs</li>
-              <li>Volunteers & student groups</li>
-              <li>Yarn and fabric suppliers</li>
-              <li>Logistics partners (India Post, Delhivery, Blue Dart)</li>
+              <li>NGOs & old-age homes</li>
+              <li>Volunteer photographers & upload assistants</li>
+              <li>Local material suppliers</li>
+              <li>Logistics partners</li>
             </ul>
           </div>
         </section>
 
         <section class="card" style="margin-top:14px">
           <h4>Stories</h4>
-          <a href="#about" class="story" style="text-decoration:none;color:inherit" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop" alt="artisan portrait">
-            <div>
-              <div style="font-weight:700">Rita's crochet journey</div>
-              <div class="muted" style="margin-top:6px">From a small town to a steady income — how Dori helped Rita find customers for her craft.</div>
-            </div>
+          <a class="story" href="#about" style="text-decoration:none;color:inherit" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop" alt="artisan portrait" />
+            <div><div style="font-weight:700">Rita's crochet journey</div><div class="muted" style="margin-top:6px">How Dori helped Rita find customers and dignity through her craft.</div></div>
           </a>
         </section>
       </aside>
@@ -158,32 +200,132 @@
   </div>
 
   <!-- image modal -->
-  <div id="modal" class="modal" onclick="closeModal(event)">
+  <div id="img-modal" class="modal" onclick="closeImgModal()">
     <div class="inner" onclick="event.stopPropagation()">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-        <div id="modal-caption" style="font-weight:700"></div>
-        <button onclick="closeModal()" style="background:transparent;border:0;font-weight:700;cursor:pointer;color:#777">Close ✕</button>
+        <div id="img-caption" class="caption"></div>
+        <button onclick="closeImgModal()" style="background:transparent;border:0;font-weight:700;cursor:pointer;color:#777">Close ✕</button>
       </div>
-      <img id="modal-img" src="" alt="">
+      <img id="img-large" src="" alt="">
+    </div>
+  </div>
+
+  <!-- register modal -->
+  <div id="reg-modal" class="modal" onclick="closeRegModal()">
+    <div class="inner" onclick="event.stopPropagation()">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div style="font-weight:700">Register an artisan</div>
+        <button onclick="closeRegModal()" style="background:transparent;border:0;font-weight:700;cursor:pointer;color:#777">Close ✕</button>
+      </div>
+
+      <form id="reg-form">
+        <div style="display:grid;gap:10px">
+          <div>
+            <label for="name">Artisan name</label>
+            <input id="name" type="text" required placeholder="e.g., Rita Devi">
+          </div>
+          <div class="form-row">
+            <div style="flex:1">
+              <label for="age">Age</label>
+              <input id="age" type="text" required placeholder="e.g., 65">
+            </div>
+            <div style="flex:1">
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" required placeholder="+91 9XXXXXXXXX">
+            </div>
+          </div>
+
+          <div>
+            <label for="product">Product & short description</label>
+            <input id="product" type="text" required placeholder="Handmade crochet bag — description">
+          </div>
+
+          <div>
+            <label for="location">Location (city, state)</label>
+            <input id="location" type="text" placeholder="e.g., Lucknow, UP">
+          </div>
+
+          <div>
+            <label for="photo">Photo (optional) — preview below</label>
+            <input id="photo" type="file" accept="image/*" />
+            <div id="preview" style="margin-top:8px"></div>
+          </div>
+
+          <div style="display:flex;gap:8px;align-items:center">
+            <button type="submit" class="btn">Submit registration</button>
+            <button type="button" class="btn ghost" onclick="fillExample()">Fill example</button>
+            <div id="reg-msg" style="margin-left:8px"></div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 
   <script>
-    // load shared script
-    (function(){
-      var s = document.createElement('script');
-      s.src = '/assets/scripts.js';
-      s.defer = true;
-      document.head.appendChild(s);
-    })();
-    function openModal(src, caption){
-      document.getElementById('modal-img').src = src;
-      document.getElementById('modal-caption').textContent = caption || '';
-      document.getElementById('modal').style.display = 'flex';
+    // image modal
+    function openImgModal(src, caption){
+      document.getElementById('img-large').src = src;
+      document.getElementById('img-caption').textContent = caption || '';
+      document.getElementById('img-modal').style.display = 'flex';
     }
-    function closeModal(e){
-      document.getElementById('modal').style.display = 'none';
+    function closeImgModal(){ document.getElementById('img-modal').style.display = 'none'; document.getElementById('img-large').src=''; }
+
+    // register modal
+    const regModal = document.getElementById('reg-modal');
+    document.getElementById('open-register').addEventListener('click', ()=> openRegModal());
+    document.getElementById('hero-register').addEventListener('click', ()=> openRegModal());
+    document.getElementById('btn-register').addEventListener('click', (e)=>{ e.preventDefault(); openRegModal(); });
+
+    function openRegModal(){ regModal.style.display = 'flex'; document.getElementById('name').focus(); }
+    function closeRegModal(){ regModal.style.display = 'none'; clearPreview(); document.getElementById('reg-msg').textContent=''; }
+
+    // photo preview
+    const photoInput = document.getElementById('photo');
+    const preview = document.getElementById('preview');
+    function clearPreview(){ preview.innerHTML=''; photoInput.value=''; }
+    photoInput.addEventListener('change', (e)=>{
+      const file = e.target.files[0];
+      if(!file) return;
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(file);
+      img.style.maxWidth = '160px'; img.style.borderRadius = '8px'; img.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)';
+      preview.innerHTML = ''; preview.appendChild(img);
+    });
+
+    // form submit
+    const form = document.getElementById('reg-form');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        age: document.getElementById('age').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        product: document.getElementById('product').value.trim(),
+        location: document.getElementById('location').value.trim()
+      };
+      if(!data.name || !data.age || !data.phone || !data.product){
+        document.getElementById('reg-msg').innerHTML = '<span style="color:#c23;font-weight:700">Please complete required fields.</span>'; return;
+      }
+      document.getElementById('reg-msg').innerHTML = '<span class="success">Thanks — registration received. We will contact you shortly.</span>';
+      const subject = encodeURIComponent('Dori Artisan Registration — ' + data.name);
+      const body = encodeURIComponent(`Name: ${data.name}\nAge: ${data.age}\nPhone: ${data.phone}\nProduct: ${data.product}\nLocation: ${data.location}\n\n(Photos attached via site upload if provided.)`);
+      setTimeout(()=> { window.open(`mailto:hello@dori.org?subject=${subject}&body=${body}`, '_blank'); }, 700);
+      setTimeout(()=> { form.reset(); clearPreview(); }, 1600);
+    });
+
+    function fillExample(){
+      document.getElementById('name').value = 'Rita Devi';
+      document.getElementById('age').value = '65';
+      document.getElementById('phone').value = '+91 9812345678';
+      document.getElementById('product').value = 'Handmade crochet bag — natural cotton, 12x14 inch';
+      document.getElementById('location').value = 'Lucknow, UP';
+      document.getElementById('name').focus();
     }
+
+    // ESC to close
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape'){ if(document.getElementById('img-modal').style.display === 'flex') closeImgModal(); if(document.getElementById('reg-modal').style.display === 'flex') closeRegModal(); }
+    });
   </script>
 </body>
 </html>
