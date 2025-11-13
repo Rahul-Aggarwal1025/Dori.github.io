@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dori — About</title>
+
+  <!-- Reuse same fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fbf8f5;--paper:#fbf6f2;--card:#ffffff;--muted:#6a625a;
+      --accent:#b85b34;--accent-2:#f3e6dd;--radius:14px;--max-w:1100px;
+    }
+    *{box-sizing:border-box}html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,var(--paper),#faf8f6);
+      color:#2b2b2b;line-height:1.5;padding:28px;display:flex;justify-content:center;-webkit-font-smoothing:antialiased;}
+    .wrap{width:100%;max-width:var(--max-w)}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+    .brand{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit}
+    .logo{width:64px;height:64px;border-radius:12px;padding:10px;background:linear-gradient(135deg,#f7d6c6,#b85b34);display:flex;align-items:center;justify-content:center;box-shadow: 0 8px 30px rgba(184,91,52,0.12);}
+    .brand h1{margin:0;font-family:Merriweather,serif;font-size:22px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a.cta{background:var(--accent);color:white;padding:8px 12px;border-radius:10px}
+
+    .card{background:var(--card);padding:24px;border-radius:16px;box-shadow:0 12px 40px rgba(20,30,28,0.06);border:1px solid rgba(20,30,28,0.02);margin-bottom:20px}
+    .muted{color:var(--muted)}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .feature{background:var(--accent-2);padding:12px;border-radius:10px}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.03)}
+
+    .story{display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:inherit}
+    .story img{width:80px;height:80px;border-radius:10px;object-fit:cover}
+
+    @media(max-width:900px){
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .features{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      nav{display:none}
+      .gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <header>
+    <a class="brand" href="index.html">
+      <div class="logo">
+        <svg width="52" height="52" viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#fff1eb"/><stop offset="1" stop-color="#ffd7c2"/></linearGradient></defs><rect rx="10" width="64" height="64" fill="url(#lg)"/><g transform="translate(8,10)" stroke="#833f24" stroke-width="2" fill="none"><path d="M4 6c4-4 14-6 22 0 6 5 6 18-2 22-8 5-20 2-24-4"/><path d="M2 18c6 3 16 4 24-2"/><path d="M6 2c6 2 12 2 18 8"/></g></svg>
+      </div>
+      <div><h1>Dori</h1><p>Handmade • Dignity • Community</p></div>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="cta" href="index.html#register">Register</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="card">
+    <h2 style="font-family:Merriweather,serif;margin:0;font-size:30px;">Our mission: dignity for every artisan.</h2>
+    <p class="muted" style="margin-top:10px;">
+      Dori supports senior artisans across India by helping them sell handcrafted goods with respect, fairness, and community support.
+    </p>
+
+    <div class="gallery" style="margin-top:16px">
+      <img src="https://images.unsplash.com/photo-1601046809584-95cd36a53f1f?q=80&w=1200&auto=format&fit=crop" alt="handwoven basket">
+      <img src="https://images.unsplash.com/photo-1542038812-2f9c174b1241?q=80&w=1200&auto=format&fit=crop" alt="hand embroidery hoop">
+      <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format&fit=crop" alt="artisan weaving cloth">
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="card">
+    <h3 style="font-family:Merriweather,serif;margin:0 0 10px;">Our Story</h3>
+
+    <p class="muted">
+      Senior artisans hold decades of craft experience — weaving, embroidery, knitting, crochet — but often lack digital access.  
+      Dori bridges this gap by helping them list products, share their stories, and get paid fairly.
+      <br><br>
+      With support from NGOs, volunteers, and caregivers, we ensure their work reaches the world.
+    </p>
+  </section>
+
+  <!-- VALUES -->
+  <section class="card">
+    <h3 style="font-family:Merriweather,serif;margin-bottom:10px;">Our Values</h3>
+    <div class="features">
+      <div class="feature">
+        <strong>Dignity</strong>
+        <p class="muted">Respectful platform, transparent payments, zero exploitation.</p>
+      </div>
+      <div class="feature">
+        <strong>Authenticity</strong>
+        <p class="muted">Real artisans, real stories, real handmade goods.</p>
+      </div>
+      <div class="feature">
+        <strong>Support</strong>
+        <p class="muted">End-to-end help: photos, listings, packaging, logistics.</p>
+      </div>
+      <div class="feature">
+        <strong>Community</strong>
+        <p class="muted">Volunteers & NGOs power Dori's mission across India.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="card">
+    <h3 style="font-family:Merriweather,serif;margin-bottom:10px;">How Dori Works</h3>
+    <p class="muted" style="margin-bottom:12px;">Human-first, simple, transparent.</p>
+
+    <div class="features">
+      <div class="feature">
+        <strong>1. Discovery</strong>
+        <p class="muted">NGOs & volunteers identify artisans and help them register.</p>
+      </div>
+      <div class="feature">
+        <strong>2. Listing</strong>
+        <p class="muted">We help capture product photos and artisan stories.</p>
+      </div>
+      <div class="feature">
+        <strong>3. Orders</strong>
+        <p class="muted">Dori processes orders, packaging, and delivery.</p>
+      </div>
+      <div class="feature">
+        <strong>4. Payments</strong>
+        <p class="muted">Fair, transparent earnings transferred directly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM & COMMUNITY -->
+  <section class="card">
+  <h3 style="font-family:Merriweather,serif;margin-bottom:10px;">Team & Community</h3>
+
+  <p class="muted">Dori is made possible by a small core team and a wide circle of volunteers, NGOs, and craft supporters.</p>
+
+  <div style="display:flex;flex-direction:column;gap:14px;margin-top:14px;">
+
+    <div class="story">
+      <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Shreya — Founder">
+      <div>
+        <strong>Founder</strong>
+        <p class="muted">Leads partnerships, onboarding, and community initiatives.</p>
+      </div>
+    </div>
+
+    <div class="story">
+      <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Arvind — Crafts Lead">
+      <div>
+        <strong>Crafts Lead</strong>
+        <p class="muted">Works directly with artisan groups across cities.</p>
+      </div>
+    </div>
+
+    <div class="story">
+      <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Volunteers & NGOs">
+      <div>
+        <strong>Volunteers & NGOs</strong>
+        <p class="muted">Photography, onboarding, training & delivery support.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- CTA -->
+  <section class="card" style="text-align:center">
+    <h3 style="font-family:Merriweather,serif;margin-bottom:10px;">Join Us</h3>
+    <p class="muted" style="max-width:550px;margin:0 auto;">
+      Help preserve Indian crafts and support senior artisans. Whether you're a customer, volunteer, or NGO — your support matters.
+    </p>
+    <a href="index.html#register" class="cta" style="margin-top:16px;display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700;">Register an Artisan</a>
+  </section>
+
+  <!-- Footer -->
+  <footer style="color:var(--muted);font-size:13px;display:flex;justify-content:space-between;margin-top:10px">
+    <div>© <strong>Dori</strong> — Handmade • Dignity • Community</div>
+    <div>Built for social impact</div>
+  </footer>
+
+</div>
+</body>
+</html>
